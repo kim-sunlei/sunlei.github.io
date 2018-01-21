@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="博客主要用于记录每天的学习生活，欢迎共同学习！">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Sunlei">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="《其他》Less，Sass，Stylus之间的差异"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="博客主要用于记录每天的学习生活，欢迎共同学习！" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="孙雷的个人博客"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>《其他》Less，Sass，Stylus之间的差异 - 孙雷的个人博客</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/zhaoziyichou">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/contact-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>《其他》Less，Sass，Stylus之间的差异</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-01-21
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="CSS轮子争夺战—LESS-SASS-STYLUS"><a href="#CSS轮子争夺战—LESS-SASS-STYLUS" class="headerlink" title="CSS轮子争夺战—LESS SASS STYLUS"></a>CSS轮子争夺战—LESS SASS STYLUS</h1><p>​    对于前端工程师来说，一个好的css预处理器可以帮助我们更好的提高工作效率。所以说选择一个适合的css预处理对于我们来说也是一件值得考虑的事情。</p>
+<p>​    本文主要对目前流行的三大css处理器：Less、Sass、Stylus进行一些方面的对比，从而在其中选择一款适合自己的css预处理器</p>
+<h3 id="1-背景介绍"><a href="#1-背景介绍" class="headerlink" title="1.背景介绍"></a>1.背景介绍</h3><h4 id="Sass："><a href="#Sass：" class="headerlink" title="Sass："></a>Sass：</h4><blockquote>
+<p>​    Sass诞生于2007年，是最早最成熟的一款CSS预处理器语言，它可以适用变量、常量、嵌套、混入、函数等功能。</p>
+<p>​    目前Sass有两套语法规则：</p>
+<p>​    1：利用缩进作为分隔符来区分代码块</p>
+<p>​    2：采用 ({}) 作为分隔符</p>
+</blockquote>
+<h4 id="Less："><a href="#Less：" class="headerlink" title="Less："></a>Less：</h4><blockquote>
+<p>​    Less产生于2009年的一个开源项目，受Sass影响比较大，采用css语法，能够很容易的让大部分开发者和设计师上手、Less提供了很多方式能平滑的将写好的代码转化成标准的css代码，在很多流行的框架和工具中已经能经常看到LESS的身影了（例如Twitter的Bootstrap框架就使用了LESS）</p>
+</blockquote>
+<h4 id="Stylus："><a href="#Stylus：" class="headerlink" title="Stylus："></a>Stylus：</h4><blockquote>
+<p>​    Stylus被称为是一种革命性的新语言，提供一个高效、动态、和使用表达方式来生成CSS，以供浏览器使用。Stylus同时支持缩进和CSS常规样式书写规则。</p>
+</blockquote>
+<h3 id="2-语法"><a href="#2-语法" class="headerlink" title="2.语法"></a>2.语法</h3><p>基本来说这三款CSS预处理器的语言风格基本相近，与CSS的风格也保持了很大的耦合度。</p>
+<h5 id="Sass与Less都是采用的标准CSS语法"><a href="#Sass与Less都是采用的标准CSS语法" class="headerlink" title="Sass与Less都是采用的标准CSS语法"></a>Sass与Less都是采用的标准CSS语法</h5><ul>
+<li><p>Sass &amp; Less语法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span></span><br><span class="line">  <span class="selector-tag">color</span>: <span class="selector-id">#fff</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* sass支持不加花括号和分号的语法格式 */</span></span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+<ul>
+<li><p>Stylus语法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0982C1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-tag">h1</span></span><br><span class="line">  <span class="selector-tag">color</span>: <span class="selector-id">#0982C1</span>; </span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span></span><br><span class="line">  <span class="selector-tag">color</span> <span class="selector-id">#0982C1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* stylus 基本可以不写符号了 */</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>变量</p>
+<h5 id="对于变量的声明三者有着一定的差异"><a href="#对于变量的声明三者有着一定的差异" class="headerlink" title="对于变量的声明三者有着一定的差异"></a>对于变量的声明三者有着一定的差异</h5><ul>
+<li>Sass  <code>$color:red</code></li>
+<li>Less  <code>@color:red</code></li>
+<li>Stylus <code>color = red</code></li>
+</ul>
+</li>
+<li><p>嵌套</p>
+<h5 id="三者都可以嵌套的方式来进行代码书写，总体来说stylus更加方便，因为它不用写花括号和分号"><a href="#三者都可以嵌套的方式来进行代码书写，总体来说stylus更加方便，因为它不用写花括号和分号" class="headerlink" title="三者都可以嵌套的方式来进行代码书写，总体来说stylus更加方便，因为它不用写花括号和分号"></a>三者都可以嵌套的方式来进行代码书写，总体来说stylus更加方便，因为它不用写花括号和分号</h5></li>
+<li><p>高级语法</p>
+<ul>
+<li><p>在sass中，还支持条件语句</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* @if可一个条件单独使用，也可以和@else结合多条件使用 */</span></span><br><span class="line">$lte7: true;</span><br><span class="line">$type: monster;</span><br><span class="line"><span class="selector-class">.ib</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:inline-block;</span><br><span class="line">    @if $lte7 &#123;</span><br><span class="line">        *<span class="selector-tag">display</span><span class="selector-pseudo">:inline</span>;</span><br><span class="line">        *<span class="selector-tag">zoom</span><span class="selector-pseudo">:1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  @if $type == ocean &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">blue</span>;</span><br><span class="line">  &#125; @<span class="keyword">else</span> if $type == matador &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">red</span>;</span><br><span class="line">  &#125; @<span class="keyword">else</span> if $type == monster &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">green</span>;</span><br><span class="line">  &#125; @<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-tag">black</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>转义后css代码如下</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ib</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:inline-block;</span><br><span class="line">    *display:inline;</span><br><span class="line">    *<span class="selector-tag">zoom</span><span class="selector-pseudo">:1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>除却条件语句，sass还支持for循环</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* for循环有两种形式 */</span></span><br><span class="line">1.@<span class="keyword">for</span> $var from &lt;start&gt; through &lt;end&gt;</span><br><span class="line"><span class="number">2</span>.@for $var from &lt;start&gt; to &lt;end&gt;</span><br></pre></td></tr></table></figure>
+<p>其中$i表示变量，start表示起始值，end表示结束值，这两个的区别是关键字through表示包括end这个数，而to则不包括end这个数。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">for</span> $i from <span class="number">1</span> to <span class="number">10</span> &#123;</span><br><span class="line">  .border-#&#123;$i&#125; &#123;</span><br><span class="line">    border: #&#123;$i&#125;px solid blue;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同时也支持while循环：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$i: 6;</span><br><span class="line">@<span class="keyword">while</span> $i &gt; <span class="number">0</span> &#123;</span><br><span class="line">  .item-#&#123;$i&#125; &#123; width: 2em * $i; &#125;</span><br><span class="line">  $i: $i - 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后，同时支持each命令，作用与for类似</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$animal-list: puma, sea-slug, egret, salamander;</span><br><span class="line">@<span class="keyword">each</span> $animal in $animal-list &#123;</span><br><span class="line">  .#&#123;$animal&#125;-icon &#123;</span><br><span class="line">    background-image: url('/images/#&#123;$animal&#125;.png');</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其css最终效果如下</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.puma-icon</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'/images/puma.png'</span>); </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.sea-slug-icon</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'/images/sea-slug.png'</span>); </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.egret-icon</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'/images/egret.png'</span>); </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.salamander-icon</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'/images/salamander.png'</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-小结"><a href="#3-小结" class="headerlink" title="3.小结"></a>3.小结</h3><p>​    总体来说三者都是为了让我们更快编译代码，帮助我们更好维护项目的。选择适合三者虽说有许差异，但是存在即有价值，选择一款适合自己的才是最好的。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/zhaoziyichou" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 Sunlei<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
