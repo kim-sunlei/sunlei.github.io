@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="《学习笔记》问题本"/>
+        <meta property="og:title" content="vscode 常用插件以及配置"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>《学习笔记》问题本 - 孙雷的个人博客</title>
+    <title>vscode 常用插件以及配置 - 孙雷的个人博客</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -154,13 +154,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>《学习笔记》问题本</h1>
+                    <h1>vscode 常用插件以及配置</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2018-01-21
+                            2018-01-27
                         
                     </span>
                 </div>
@@ -182,37 +182,95 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2 id="问题笔记"><a href="#问题笔记" class="headerlink" title="问题笔记"></a>问题笔记</h2><p>2018.1.14</p>
-<p>Q：如何干掉正在使用的端口</p>
-<p>A：<code>lsof -i:端口号</code>查看端口是否被占用</p>
-<p>​      <code>kill -9 端口号</code>干掉端口</p>
-<hr>
-<p>2018.1.18</p>
-<p>Q：如何使用Navicat链接自己服务器的数据库</p>
-<p>A：在Navicat中创建链接里在SSH通道填写自己服务器信息，密码要点保存密码</p>
-<hr>
-<p>2018.1.18</p>
-<p>Q：sql如何使用utf-8编码</p>
-<p>A：</p>
+                <h1 id="VS-code-前端常用插件以及设置"><a href="#VS-code-前端常用插件以及设置" class="headerlink" title="VS code 前端常用插件以及设置"></a>VS code 前端常用插件以及设置</h1><p><a href="https://code.visualstudio.com/docs/?dv=osx" target="_blank" rel="noopener">官网下载地址</a> (打开网址自动下载)</p>
 <ul>
-<li><p>在创建表时</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-- 创建表时，设置表、字段编码</span><br><span class="line">use dbtest;</span><br><span class="line">drop table <span class="keyword">if</span> exists tbtest;</span><br><span class="line">create table tbtest(</span><br><span class="line">id int(<span class="number">10</span>) auto_increment,</span><br><span class="line">user_name varchar(<span class="number">60</span>) CHARACTER SET GBK COLLATE gbk_chinese_ci,</span><br><span class="line">email varchar(<span class="number">60</span>),</span><br><span class="line">PRIMARY key(id)</span><br><span class="line">)CHARACTER SET utf8 COLLATE utf8_general_ci;</span><br></pre></td></tr></table></figure>
+<li><h4 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h4><ul>
+<li><code>Auto Close Tag</code>  自动补全标签</li>
+<li><code>Auto Rename Tag</code> 自动更改标签名</li>
+<li><code>Bracket Pair Colorizer</code> 括号颜色拓展 每对括号为同一颜色</li>
+<li><code>Path Intellisense</code> 路径自动补全</li>
+<li><code>beautify</code> 格式化代码工具</li>
+<li><code>Dash</code> 查文档必备,快捷键 ctrl + h</li>
+<li><code>fileheader</code> 顶部注释模板，可定义作者、时间等信息，并会自动更新最后修改时间</li>
+<li><code>filesize</code>在底部状态栏显示当前文件大小，点击后还可以看到详细创建、修改时间</li>
+<li><code>Code Runner</code>运行多种语言的代码片段或代码文件，安装完成后，右上角出现箭头，点击箭头即可运行文件</li>
+<li><code>Image Preview</code> 鼠标移到路径里显示图像预览</li>
+</ul>
 </li>
-<li><p>在创建服务器时</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let createDBSQL = &quot;CREATE DATABASE NewB character set UTF8&quot;;</span><br></pre></td></tr></table></figure>
+<li><h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><ul>
+<li><code>HTML Snippets</code> 超级实用且初级的 H5代码片段以及提示</li>
+<li><code>Class autocomplete for HTML</code>智能提示HTML class = “ ”  属性</li>
+<li><code>htmltagwrap</code>  可以在选中HTML标签中外面套一层标签</li>
+</ul>
+</li>
+<li><h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><ul>
+<li><code>HTML CSS Support</code> 让 html 标签上写class 智能提示当前项目所支持的样式<ul>
+<li>新版已经支持scss文件检索</li>
+</ul>
+</li>
+<li><code>css peek</code>能够查看CSS ID和类的字符串作为HTML文件中相应的CSS定义<ul>
+<li>使用方法：将鼠标放在class属性，右键“查看定义”</li>
+</ul>
 </li>
 </ul>
-<hr>
-<p>2018.1.19</p>
-<p>Q： 在使用axios时 同时执行多个请求</p>
-<p>A：     <a href="https://www.cnblogs.com/guazi/p/6796829.html" target="_blank" rel="noopener">链接</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//同时执行多个请求</span></span><br><span class="line"></span><br><span class="line">axios.all([</span><br><span class="line"></span><br><span class="line">    axios.get(<span class="string">'https://api.github.com/xxx/1'</span>),</span><br><span class="line"></span><br><span class="line">    axios.get(<span class="string">'https://api.github.com/xxx/2'</span>)</span><br><span class="line"></span><br><span class="line">  ])</span><br><span class="line"></span><br><span class="line">  .then(axios.spread(<span class="function"><span class="keyword">function</span> (<span class="params">userResp, reposResp</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 上面两个请求都完成后，才执行这个回调方法</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'User'</span>, userResp.data);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Repositories'</span>, reposResp.data);</span><br><span class="line"></span><br><span class="line">  &#125;));</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">//当所有的请求都完成后，会收到一个数组，包含着响应对象，其中的顺序和请求发送的顺序相同，可以使用 axios.spread 分割成多个单独的响应对象</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>2018.1.20</p>
-<p>Q：在express使用Pug模板引擎时，render发送的参数如何在js中使用</p>
-<p>A： <a href="https://segmentfault.com/q/1010000010674249" target="_blank" rel="noopener">链接</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">script.</span><br><span class="line">    <span class="keyword">let</span> dataObj = <span class="string">"#&#123;dataObject&#125;"</span>;</span><br><span class="line"><span class="comment">//这里就会把 dataObject 的值传进来作为变量赋给 dataObj ，这是很早之前 express 的语法，不知道现在这种写法还能不能工作。</span></span><br></pre></td></tr></table></figure>
-<hr>
+</li>
+<li><h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><ul>
+<li><code>Document this</code>js 的注释模板<ul>
+<li>新版的vscode已经原生支持,在function上输入/** tab</li>
+</ul>
+</li>
+<li><code>ESlint</code> 自定制提示规则<ul>
+<li><a href="https://segmentfault.com/a/1190000010462601" target="_blank" rel="noopener">配置链接</a></li>
+</ul>
+</li>
+<li><code>JavaScript (ES6) code snippets</code>  es6代码片段</li>
+<li><code>JavaScript Snippet Pack</code>  js代码片段</li>
+<li><code>Quokka.js</code>实时观看 javascript 的变量的变化</li>
+</ul>
+</li>
+<li><h4 id="JQ"><a href="#JQ" class="headerlink" title="JQ"></a>JQ</h4><ul>
+<li><code>jQuery Code Snippets</code>  jq代码提示</li>
+</ul>
+</li>
+<li><h4 id="BS"><a href="#BS" class="headerlink" title="BS"></a>BS</h4><ul>
+<li><code>Bootstrap 3 Snippets</code> </li>
+<li><code>Bootstrap 4 &amp; Font awesome snippets for Visual studio code</code></li>
+</ul>
+</li>
+<li><h4 id="Sass"><a href="#Sass" class="headerlink" title="Sass"></a>Sass</h4><ul>
+<li><p><code>Live Sass Compiler</code> 实时编译 sass </p>
+<ul>
+<li><p>配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"liveSassCompile.settings.formats"</span>:[</span><br><span class="line">        <span class="comment">// You can add more</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"format"</span>: <span class="string">"compressed"</span>,<span class="comment">//压缩</span></span><br><span class="line">            <span class="string">"extensionName"</span>: <span class="string">".min.css"</span>,<span class="comment">//编译后缀名</span></span><br><span class="line">            <span class="string">"savePath"</span>: <span class="string">"./css"</span><span class="comment">//编译保存的路径</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br></pre></td></tr></table></figure>
+<h5 id="使用-（👁Watch-my-Sass）"><a href="#使用-（👁Watch-my-Sass）" class="headerlink" title="使用 （👁Watch my Sass）"></a>使用 （👁Watch my Sass）</h5></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h4><ul>
+<li><code>Node.js Modules Intellisense</code> 可以在导入语句中自动完成JavaScript / TypeScript模块。</li>
+</ul>
+</li>
+<li><h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><ul>
+<li><code>GitLens</code> 丰富的git日志插件</li>
+<li><code>Git History</code>以图表的形式查看git日志</li>
+</ul>
+</li>
+<li><h4 id="主题更改"><a href="#主题更改" class="headerlink" title="主题更改"></a>主题更改</h4><ul>
+<li><h5 id="左侧插件栏搜索Theme，下载喜欢的主题"><a href="#左侧插件栏搜索Theme，下载喜欢的主题" class="headerlink" title="左侧插件栏搜索Theme，下载喜欢的主题"></a>左侧插件栏搜索Theme，下载喜欢的主题</h5></li>
+</ul>
+</li>
+<li><h4 id="类似WS的自动保存"><a href="#类似WS的自动保存" class="headerlink" title="类似WS的自动保存"></a>类似WS的自动保存</h4><ul>
+<li><h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "editor.fontSize": 13,  //字体大小</span><br><span class="line">    "workbench.colorTheme": "Brackets Light Pro", //主题</span><br><span class="line">    "files.autoSave": "afterDelay", //自动保存在延迟后</span><br><span class="line">    "files.autoSaveDelay": 1,  // 1毫秒延迟</span><br><span class="line">    "editor.formatOnType": true,</span><br><span class="line">    "window.zoomLevel": 1,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="⚠️注意要打上花括号"><a href="#⚠️注意要打上花括号" class="headerlink" title="⚠️注意要打上花括号 { }"></a>⚠️注意要打上花括号 { }</h5><p>​</p>
+</li>
+</ul>
+<p>参考文章：</p>
+<p><a href="https://segmentfault.com/a/1190000006697219" target="_blank" rel="noopener"> vscode 插件推荐 - 献给所有前端工程师（2017.8.18更新）</a></p>
+<p><a href="https://segmentfault.com/a/1190000011779959" target="_blank" rel="noopener">vscode 前端插件推荐</a></p>
+<p>​</p>
+</li>
+</ul>
 
 
                 
