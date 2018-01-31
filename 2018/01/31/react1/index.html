@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="博客主要用于记录每天的学习生活，欢迎共同学习！">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Sunlei">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="《React学习笔记》一"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="博客主要用于记录每天的学习生活，欢迎共同学习！" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="孙雷的个人博客"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>《React学习笔记》一 - 孙雷的个人博客</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/zhaoziyichou">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/contact-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>《React学习笔记》一</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-01-31
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="《React学习笔记》"><a href="#《React学习笔记》" class="headerlink" title="《React学习笔记》"></a>《React学习笔记》</h2><ul>
+<li><h4 id="属性＆状态"><a href="#属性＆状态" class="headerlink" title="属性＆状态"></a>属性＆状态</h4><p>属性的含义以及用法</p>
+<blockquote>
+<p>props=properties 英文中属性的意思。属性不可以修改，也就是属性不可以由组件进行修改，组件的属性是由父组件传递过来的，相当于组件在出生的时候带的。</p>
+</blockquote>
+<p>用法</p>
+<p>​    直接在调用组件的时候传入一个键值对</p>
+<p><code>&lt;HelloWorld name=&quot;李明&quot;&gt;&lt;/HelloWorld&gt;</code></p>
+<p>​    可以是一个数组：这样属性拿到的也是一个数组,在编写多选框和表单的时候用的多看，组件可以根据传入的属性来构建子组件</p>
+<p><code>&lt;HelloWorld name={[1,2,3]}&gt;&lt;/HelloWorld&gt;</code></p>
+<p>​    可以直接传入一个变量：这个变量可以在外部定义，然后在组件里面去引用他。变量可以是一个数组，对象，字符串，数值都可以</p>
+<p><code>&lt;HelloWorld name={variable}&gt;&lt;/HelloWorld&gt;</code></p>
+<h4 id="状态的含义和用法"><a href="#状态的含义和用法" class="headerlink" title="状态的含义和用法"></a>状态的含义和用法</h4><blockquote>
+<p>状态 state：使用this.state来引用，state本身就是状态的意思，状态指的是事物所处的状况，状况就是环境。注意：状态是事物自己处理的，不和属性一样，属性是天生的，事物一般来说没有办法修改。状态是事物本身的是事物的私有属性，也就是由自己决定，父组件和子组件都不能改变他。给定了状态就一定知道结果是什么。</p>
+</blockquote>
+<p>getInitialState:初始化每个实例特有的状态<br>setState:更新组件状态，原则上是经常使用的，但是setProps原则上面不推荐你使用</p>
+<h4 id="属性和状态对比"><a href="#属性和状态对比" class="headerlink" title="属性和状态对比"></a>属性和状态对比</h4><ul>
+<li>相似点<ul>
+<li>都是纯js对象</li>
+<li>都会触发render函数更新</li>
+<li>都具有确定性</li>
+</ul>
+</li>
+<li>如何区分属性和状态<ul>
+<li>组件在运行时需要修改的数据就是状态。<br>属性的核心要点就是不能修改！</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="元素与组件的组别"><a href="#元素与组件的组别" class="headerlink" title="元素与组件的组别"></a>元素与组件的组别</h3><h4 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h4><blockquote>
+<p>React 元素（React element），它是 React 中最小基本单位，我们可以使用 JSX 语法轻松地创建一个 React 元素:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">"element"</span>&gt;</span>I'm element<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>React 元素不是真实的 DOM 元素，它仅仅是 js 的普通对象（plain objects），所以也没办法直接调用 DOM 原生的 API。上面的 JSX 转译后的对象大概是这样的:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    _context: Object,</span><br><span class="line">    _owner: null,</span><br><span class="line">    key: null,</span><br><span class="line">    props: &#123;</span><br><span class="line">    className: 'element'，</span><br><span class="line">    children: 'I'm element'</span><br><span class="line">  &#125;,</span><br><span class="line">    ref: null,</span><br><span class="line">    type: "div"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="React-createElement"><a href="#React-createElement" class="headerlink" title="React.createElement()"></a>React.createElement()</h4><p>JSX 语法就是用<code>React.createElement()</code>来构建 React 元素的。它接受三个参数，第一个参数可以是一个标签名。如<code>div</code>、<code>span</code>，或者 React 组件。第二个参数为传入的属性。第三个以及之后的参数，皆作为组件的子组件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">React.createElement(</span><br><span class="line">    type,</span><br><span class="line">    [props],</span><br><span class="line">    [...children]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h4 id="React-cloneElement"><a href="#React-cloneElement" class="headerlink" title="React.cloneElement()"></a>React.cloneElement()</h4><p><code>React.cloneElement()</code>与<code>React.createElement()</code>相似，不同的是它传入的第一个参数是一个 React 元素，而不是标签名或组件。新添加的属性会并入原有的属性，传入到返回的新元素中，而就的子元素奖杯替换。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">React.cloneElement(</span><br><span class="line">  element,</span><br><span class="line">  [props],</span><br><span class="line">  [...children]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><p>React 中有三种构建组件的方式。<code>React.createClass()</code>、<code>ES6 class</code>和无状态函数。</p>
+<ul>
+<li><h4 id="React-createClass"><a href="#React-createClass" class="headerlink" title="React.createClass()"></a>React.createClass()</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var Greeting = React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="ES6-class"><a href="#ES6-class" class="headerlink" title="ES6 class"></a>ES6 class</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class Greeting extemds React.Component&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="无状态函数"><a href="#无状态函数" class="headerlink" title="无状态函数"></a>无状态函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Greeting (props) &#123;</span><br><span class="line">  return &lt;h1&gt;Hello, &#123;props.name&#125;&lt;/h1&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><h3 id="元素与组件的区别"><a href="#元素与组件的区别" class="headerlink" title="元素与组件的区别"></a>元素与组件的区别</h3><ul>
+<li><p>组件是由元素构成的。元素数据结构是普通对象，而组件数据结构是类或纯函数。除此之外，还有几点区别要注意：</p>
+<h3 id="this-props-children"><a href="#this-props-children" class="headerlink" title="this.props.children"></a>this.props.children</h3><p>在 JSX 中，被元素嵌套的元素会以属性 children 的方式传入该元素的组件。当仅嵌套一个元素时，children 是一个 React 元素，当嵌套多个元素时，children 是一个 React 元素的数组。可以直接把 children 写入 JSX 的中，但如果要给它们传入新属性，就要用到<code>React.cloneElement()</code>来构建新的元素。我曾放过以下错误:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">render () &#123;</span><br><span class="line">  var Child = this.props.children</span><br><span class="line">  return &lt;div&gt;&lt;Child tip=&#123;&apos;error!&apos;&#125;/&gt;&lt;div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>因为 Child 是一个 React 元素，而不是组件，这样的写法是完全错误的，正确的方式应该是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">render () &#123;</span><br><span class="line">  var child = this.props.children</span><br><span class="line">  return &lt;div&gt;&#123; React.cloneElement(child, &#123;tip: &apos;right way!&apos;&#125;) &#125;&lt;div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>就这样，原有属性和新添加的属性被一并传入了子元素。使用<code>React.cloneElement()</code>才是操作元素的正确姿势。</p>
+</li>
+</ul>
+</li>
+<li><h3 id="展示型组件"><a href="#展示型组件" class="headerlink" title="展示型组件"></a><strong>展示型组件</strong></h3><p>写法1：函数写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos; //必须导入</span><br><span class="line">//定义一个header函数，传入参数，返回一个jsx模板,函数名小写字母开头</span><br><span class="line">exports const header = (params) =&gt; &#123;</span><br><span class="line">    return (</span><br><span class="line">        &lt;div&gt;&#123;params&#125;&lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>写法2：react组件写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;</span><br><span class="line">//定义一个react组件，组件名大写字母开头</span><br><span class="line">exports class List extends React.Component &#123;</span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    render() &#123;</span><br><span class="line">        const &#123; data &#125; = this.props</span><br><span class="line">        return (</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">                &#123;</span><br><span class="line">                    data.length &gt; 0 &amp;&amp; </span><br><span class="line">                    data.map((element, index) =&gt; &#123;</span><br><span class="line">                       &lt;li key=&#123;index&#125;&gt;&#123;element&#125;&lt;/li&gt; </span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="容器型组件"><a href="#容器型组件" class="headerlink" title="容器型组件"></a>容器型组件</h3><p>容器组件和展示型组件类似，本质就是react组件，只不过是将各种展示型组件组合起来，只不过函数组件和react组件导入方式有所区别。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;</span><br><span class="line">import &#123; header, List &#125; from &apos;./index&apos;</span><br><span class="line"></span><br><span class="line">//定义一个react容器，组件名大写字母开头</span><br><span class="line">exports class Page extends React.Component &#123;</span><br><span class="line">    </span><br><span class="line">    render() &#123;</span><br><span class="line">        let data = [1, 2, 3, 4, 5]</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &#123;header(params)&#125;</span><br><span class="line">                &lt;List data=&#123;data&#125; /&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/zhaoziyichou" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 Sunlei<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
