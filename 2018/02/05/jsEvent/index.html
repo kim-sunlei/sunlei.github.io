@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="孙雷的个人博客"/>
+        <meta property="og:title" content="《JavaScript》事件流"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>归档：2018 - 孙雷的个人博客</title>
+    <title>《JavaScript》事件流 - 孙雷的个人博客</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -146,140 +146,101 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/contact-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2018</h1>
+                <div class="post-heading">
+                    <h1>《JavaScript》事件流</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-02-05
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2018/02/05/jsEvent/">
-        <h1 class="post-title archive">
-            《JavaScript》事件流
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-05
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2018/02/03/es6Let/">
-        <h1 class="post-title archive">
-            《ES6学习笔记》--- let
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-03
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2018/02/02/cityJson/">
-        <h1 class="post-title archive">
-            《经验记录》城市格式化代码
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-02
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2018/01/31/react1/">
-        <h1 class="post-title archive">
-            《React学习笔记》基础概念对比
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-01-31
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2018/01/27/vsCode/">
-        <h1 class="post-title archive">
-            vscode 常用插件以及配置
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-01-27
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2018/01/21/Q&A/">
-        <h1 class="post-title archive">
-            《学习笔记》问题本
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-01-21
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2018/01/21/css/">
-        <h1 class="post-title archive">
-            《工具对比》Less，Sass，Stylus之间的差异
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-01-21
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2018/01/12/2018.1.12/">
-        <h1 class="post-title archive">
-            《学习笔记》Node爬虫
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-01-12
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="《JavaScript》事件流"><a href="#《JavaScript》事件流" class="headerlink" title="《JavaScript》事件流"></a>《JavaScript》事件流</h1><h4 id="事件流原理："><a href="#事件流原理：" class="headerlink" title="事件流原理："></a>事件流原理：</h4><blockquote>
+<p>事件流是从window开始，最后回到window的一个过程，分为三个阶段(1~5)捕获过程、(5~6)目标过程、(6~10)冒泡过程。</p>
+</blockquote>
+<p>​            <img src="https://image-1255851992.cos.ap-beijing.myqcloud.com/1005354-20161222125521823-1914047378.png" alt="">    </p>
+<ul>
+<li><h3 id="冒泡型事件"><a href="#冒泡型事件" class="headerlink" title="冒泡型事件"></a>冒泡型事件</h3><p>事件按照从最具体的事件目标到最不具体的事件目标(document对象)向上传播的顺序触发。</p>
+</li>
+<li><h3 id="捕获型事件"><a href="#捕获型事件" class="headerlink" title="捕获型事件"></a>捕获型事件</h3><p>事件从最不具体的对象(document 对象)开始触发。</p>
+<p><img src="https://image-1255851992.cos.ap-beijing.myqcloud.com/20131028160201571.jpg" alt=""></p>
+</li>
+<li><h3 id="DOM事件流"><a href="#DOM事件流" class="headerlink" title="DOM事件流"></a>DOM事件流</h3><p>同时支持两种事件模型：捕获型事件和冒泡型事件，但是，捕获型事件先发生。两种事件流会触及DOM中的所有对象，从document对象开始，也在document对象结束。</p>
+<p>​</p>
+</li>
 </ul>
+<h2 id="js事件之事件处理程序"><a href="#js事件之事件处理程序" class="headerlink" title="js事件之事件处理程序"></a>js事件之事件处理程序</h2><p>事件处理程序（handler），又事件侦听器（listener）、事件句柄。响应点击等事件的函数。</p>
+<ul>
+<li>HTML事件处理程序</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eg： &lt;input type=&quot;button&quot; value=&quot;Click Here&quot; onclick=&quot;alert(&apos;Clicked!&apos;);&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>DOM0级事件处理程序(通过JS将函数赋值给对象的事件)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 var btn = document.getElementById(&quot;btn&quot;);</span><br><span class="line">2 btn.onclick = function() &#123;</span><br><span class="line">3       alert(this.id);  </span><br><span class="line">4 &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>DOM2级事件处理程序</li>
+</ul>
+<blockquote>
+<p>DOM2级事件定义了两个方法用于处理制定和删除事件处理程序的操作：addEventListener和removeEventListener。所有的DOM节点都包含这两个方法，并且都接收三个参数：事件类名、事件处理方法、一个布尔值。布尔参数true表示在捕获阶段调用事件处理程序；false表示在事件冒泡阶段处理。</p>
+</blockquote>
+<ul>
+<li>IE事件处理程序</li>
+</ul>
+<blockquote>
+<p>实现了DOM两个类似的方法attachEvent和detachEvent，这两个方法都接收两个相同的参数，事件处理程序名称和事件处理程序方法，由于IE指支持事件冒泡，所以添加的程序会被添加到冒泡阶段。</p>
+</blockquote>
+<ul>
+<li><a href="http://www.cnblogs.com/Yvette1014/p/5466399.html" target="_blank" rel="noopener">跨浏览器的事件处理程序</a></li>
+</ul>
+<blockquote>
+<p>跨浏览器的事件处理程序就是创建一个对象，存放用于添加、删除事件处理程序的方法。方法接收三个参数：要操作的元素、事件名称、事件处理程序函数</p>
+</blockquote>
+<h4 id="js事件之事件对象"><a href="#js事件之事件对象" class="headerlink" title="js事件之事件对象"></a>js事件之事件对象</h4><p>在触发DOM上的某个事件时，会产生一个事件对象event。这个对象中包含着所有与事件有关的信息。包括导致事件的元素，事件的类型以及其他与特定事件相关的信息。</p>
+<p><img src="https://image-1255851992.cos.ap-beijing.myqcloud.com/1094723-20170522191844476-1439441972.jpg" alt=""></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
