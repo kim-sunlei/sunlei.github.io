@@ -182,8 +182,8 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="《ES6学习笔记》—-let"><a href="#《ES6学习笔记》—-let" class="headerlink" title="《ES6学习笔记》— let"></a>《ES6学习笔记》— let</h1><p>本文主要记录在学习es6中的一些知识点的一个笔记。</p>
-<p>主要参考阮老师的 <a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="noopener">《ECMAScript6 入门》</a></p>
+                <h1 id="《ES6学习笔记》—-let-amp-amp-const"><a href="#《ES6学习笔记》—-let-amp-amp-const" class="headerlink" title="《ES6学习笔记》— let &amp;&amp; const"></a>《ES6学习笔记》— let &amp;&amp; const</h1><p>⚠️ 本文只是一个自己整理的学习笔记，其内容中的知识点不保证100%正确。</p>
+<p>主要的学习资料，参考文章为阮老师的 <a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="noopener">《ECMAScript6 入门》</a></p>
 <blockquote>
 <h3 id="let-相关"><a href="#let-相关" class="headerlink" title="let 相关"></a>let 相关</h3></blockquote>
 <p>let为块级作用域，声明时就绑定在了所属的块级内，在循环体中则作用域在循环体内。</p>
@@ -239,6 +239,42 @@
 <p>​</p>
 </li>
 </ul>
+<blockquote>
+<h2 id="const-相关"><a href="#const-相关" class="headerlink" title="const 相关"></a>const 相关</h2></blockquote>
+<ul>
+<li><p>基本用法</p>
+<p><code>const</code>声明一个只读的常量。声明之后，常量的值就无法改变。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">a = <span class="number">11</span>; <span class="comment">//报错</span></span><br></pre></td></tr></table></figure>
+<p>只声明不赋值，会报错</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a; <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>作用域</p>
+<p><code>const</code> 与 <code>let</code> 作用域相同，都是块级作用域。只在声明所在的块级作用域内有效。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> a = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">//报错</span></span><br></pre></td></tr></table></figure>
+<p><code>const</code> 也会存在<strong><em>暂时性死区</em></strong> </p>
+</li>
+<li><p>本质</p>
+<p>本质上<code>const</code> 保存的不是变量的值，而是变量指向的那个内存地址。</p>
+<p><strong><em>但是如果 <code>const</code> 指向的内存地址保存的是一个对象的话，<code>const</code> 只能保证指向内存地址不变，但是对象的内部结构就控制不了了。</em></strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向 foo 添加一个属性，会成功</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">console</span>.log(foo.prop) <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 把foo指向改变了，会报错</span></span><br><span class="line">foo = &#123;&#125;; <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+<p>如果要解决这个问题可以适用如下方法：</p>
+<ul>
+<li><p>Object.freeze 对象冻结</p>
+</li>
+<li><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> constantize = <span class="function">(<span class="params">obj</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">Object</span>.freeze(obj);</span><br><span class="line">  <span class="built_in">Object</span>.keys(obj).forEach( <span class="function">(<span class="params">key, i</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> obj[key] === <span class="string">'object'</span> ) &#123;</span><br><span class="line">      constantize( obj[key] );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 对象彻底冻结</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h3 id="顶层对象与全局变量"><a href="#顶层对象与全局变量" class="headerlink" title="顶层对象与全局变量"></a>顶层对象与全局变量</h3></blockquote>
+<p>在es6之前，声明的全局变量都与顶层对象相挂钩。</p>
+<p>在浏览器环境中，顶层对象为<code>window</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// 1;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a) <span class="comment">// 1；</span></span><br></pre></td></tr></table></figure>
+<p>js的这个设计模式被认为是JavaScript语言最大败笔之一。</p>
+<p>但是在es6中，把全局变量与顶层对象之间挂钩取消了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>这样 <code>let</code> 声明的变量与顶层对象 <code>window</code> 并没有直接联系。</p>
 
 
                 

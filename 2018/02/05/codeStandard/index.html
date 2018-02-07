@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>归档：2018/2 - 孙雷的个人博客</title>
+    <title>孙雷的个人博客</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -146,101 +146,86 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/contact-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2018/2</h1>
+                <div class="post-heading">
+                    <h1>Untitled</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-02-05
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2018/02/06/weekPlaneA/">
-        <h1 class="post-title archive">
-            Untitled
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-06
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="JavaScript代码规范"><a href="#JavaScript代码规范" class="headerlink" title="JavaScript代码规范"></a>JavaScript代码规范</h1><ol>
+<li><p>运算符、操作符左右两边加空格</p>
+</li>
+<li><p>语句结尾加 ;</p>
+</li>
+<li><p>函数定义 -&gt; <code>function</code>   空格  <code>sum</code>   空格  <code>()</code>  空格  <code>{}</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正确写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>箭头函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正确写法</span></span><br><span class="line"><span class="keyword">let</span> sum = (a, b) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 单参数写法</span></span><br><span class="line"><span class="keyword">let</span> square = <span class="function"><span class="params">number</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> number * number;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TabSize 定义为 2 空格</p>
+</li>
+<li><p>字符串使用<code>&quot;&quot;</code>，多行文本使用 模板字符串<code>``</code></p>
+</li>
+<li><p>涉及到判断是否一致，全部使用 <code>===</code>  和 <code>!==</code></p>
+</li>
+<li><p>代码段中多余行删除</p>
+</li>
+<li><p>代码段与代码段之间加空行</p>
+</li>
+<li><p>注释</p>
+<p>单行注释, <code>//</code> 后加空格</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 我是注释</span></span><br><span class="line"><span class="comment">// 我是注释</span></span><br><span class="line"><span class="comment">// 我是注释</span></span><br></pre></td></tr></table></figure>
+<p>多行注释, <code>*</code>号后注释前，需要加空格</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 我是多行注释</span></span><br><span class="line"><span class="comment"> * 我是多行注释</span></span><br><span class="line"><span class="comment"> * 我是多行注释</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2018/02/05/codeStandard/">
-        <h1 class="post-title archive">
-            Untitled
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-05
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2018/02/05/jsEvent/">
-        <h1 class="post-title archive">
-            《JavaScript》事件流
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-05
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2018/02/03/es6Let/">
-        <h1 class="post-title archive">
-            《ES6学习笔记》--- let
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-03
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2018/02/02/cityJson/">
-        <h1 class="post-title archive">
-            《经验记录》城市格式化代码
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2018-02-02
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
