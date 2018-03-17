@@ -185,7 +185,7 @@
                 <p>⚠️ 本文只是一个自己整理的学习笔记，其内容中的知识点不保证100%正确。</p>
 <p>主要的学习资料，参考文章为阮老师的 <a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="noopener">《ECMAScript6 入门》</a></p>
 <blockquote>
-<h3 id="let-相关"><a href="#let-相关" class="headerlink" title="let 相关"></a>let 相关</h3></blockquote>
+<h3 id="1-let"><a href="#1-let" class="headerlink" title="1. let"></a>1. let</h3></blockquote>
 <p>let为<strong><em>块级作用域</em></strong>，声明时就绑定在了所属的块级内，在循环体中则作用域在循环体内。</p>
 <ul>
 <li><h4 id="不存在变量提升"><a href="#不存在变量提升" class="headerlink" title="不存在变量提升"></a>不存在变量提升</h4><p>在使用 <code>var</code>声明变量时，在声明前使用变量，该变量的值为 <code>undefined</code></p>
@@ -232,13 +232,12 @@
 <li>块级作用域与函数声明</li>
 </ul>
 <p>在 es5 中，规定函数只能在顶层作用域和函数作用域之中声明，不能在块级作用域声明。</p>
-<p>在 es6 中，明确规定允许在块级作用域中声明函数。</p>
-<p> es6 规定，块级作用域之中，函数声明语句的行为类似<code>let</code> ,在块级作用域之外不可引用。</p>
+<p>在 es6 中，明确规定允许在块级作用域中声明函数。块级作用域之中，函数声明语句的行为类似<code>let</code> ,在块级作用域之外不可引用。</p>
 <p>​</p>
 </li>
 </ul>
 <blockquote>
-<h2 id="const-相关"><a href="#const-相关" class="headerlink" title="const 相关"></a>const 相关</h2></blockquote>
+<h2 id="2-const"><a href="#2-const" class="headerlink" title="2. const"></a>2. const</h2></blockquote>
 <ul>
 <li><p>基本用法</p>
 <p><code>const</code>声明一个只读的常量。声明之后，常量的值就无法改变。</p>
@@ -265,7 +264,7 @@
 </li>
 </ul>
 <blockquote>
-<h3 id="顶层对象与全局变量"><a href="#顶层对象与全局变量" class="headerlink" title="顶层对象与全局变量"></a>顶层对象与全局变量</h3></blockquote>
+<h3 id="3-顶层对象与全局变量"><a href="#3-顶层对象与全局变量" class="headerlink" title="3. 顶层对象与全局变量"></a>3. 顶层对象与全局变量</h3></blockquote>
 <p>在es6之前，声明的全局变量都与顶层对象相挂钩。</p>
 <p>在浏览器环境中，顶层对象为<code>window</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// 1;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a) <span class="comment">// 1；</span></span><br></pre></td></tr></table></figure>

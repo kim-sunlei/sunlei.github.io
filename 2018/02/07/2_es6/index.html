@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="ES6 —- 变量的解构赋值"/>
+        <meta property="og:title" content="ES6 —-  扩展运算符"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>ES6 —- 变量的解构赋值 - 孙雷的个人博客</title>
+    <title>ES6 —-  扩展运算符 - 孙雷的个人博客</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -154,7 +154,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>ES6 —- 变量的解构赋值</h1>
+                    <h1>ES6 —-  扩展运算符</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
@@ -184,16 +184,8 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <p>⚠️ 本文只是一个自己整理的学习笔记，其内容中的知识点不保证100%正确。</p>
 <p>主要的学习资料，参考文章为阮老师的 <a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="noopener">《ECMAScript6 入门》</a></p>
-<h2 id="1-数组的解构赋值"><a href="#1-数组的解构赋值" class="headerlink" title="1. 数组的解构赋值"></a>1. 数组的解构赋值</h2><blockquote>
-<p>ES6 允许你按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构(Destructuring) </p>
-</blockquote>
-<p>ES6 之前，为变量赋值，只能采取以下方法 ( 直接指定值 )</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">let</span> c = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
-<p>在 ES6 中，可以写成下面这样</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(c) <span class="comment">//3</span></span><br></pre></td></tr></table></figure>
-<p>上面赋值遵循 <strong><em>一一匹配</em></strong> 的模式。如果 <code>=</code> 两边的模式相同，就会进行匹配赋值。</p>
-<p>下面是一些嵌套数组进行解构的例子。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [foo,[[bar], baz]] = [<span class="number">1</span>, [[<span class="number">2</span>], <span class="number">3</span>]];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [ , , third] = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>];  <span class="comment">// third = "c"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, , y] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; <span class="comment">// x = 1 , y = 3;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [head, ...tail] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h4></blockquote>
 
 
                 
