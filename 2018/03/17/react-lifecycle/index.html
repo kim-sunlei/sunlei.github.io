@@ -284,7 +284,7 @@
 <p>为什么一般都在 <code>componentDidMount</code> 中发送请求？</p>
 </blockquote>
 <p>首先我们要清楚这个顺序： <code>componentWillMount</code>  &gt; <code>render</code> &gt; <code>`componentDidMount</code> 。</p>
-<p>上面的生命周期中说过，<code>componentWillMount</code> 可以在服务器端使用，所以第一次渲染可以由服务器调用 <code>componentWillMount</code> 完成渲染。之后再执行 <code>render</code> 先将 dom 结构渲染完成，再在 <code>componentWillMount</code> 中完成补充内容的操作。在没有服务器端渲染的情况下，如果请求是异步的，在 <code>componentWillMount</code> 还是 <code>componentDidMount</code> 中发送请求是没有差别的，因为都不会阻挡你组件的挂载流程。如果是同步的，在 <code>componentWillMount</code> 中请求的话会造成挂载过程的阻塞，因为第一次<code>render</code>推迟执行，从而导致白屏卡顿，或者可能多次进行调用，发送多个请求。如果在 <code>componentWillMount</code> 中进行同步的请求的话，可以在第一次 <code>render</code> 中渲染一些 loading 画面等等。之后等数据返回之后再展现内容，可以提高用户体验。</p>
+<p>上面的生命周期中说过，<code>componentWillMount</code> 可以在服务器端使用，所以第一次渲染可以由服务器调用 <code>componentWillMount</code> 完成渲染。之后再执行 <code>render</code> 先将 dom 结构渲染完成，再在 <code>componentDidMount</code> 中完成补充内容的操作。在没有服务器端渲染的情况下，如果请求是异步的，在 <code>componentWillMount</code> 还是 <code>componentDidMount</code> 中发送请求是没有差别的，因为都不会阻挡你组件的挂载流程。如果是同步的，在 <code>componentWillMount</code> 中请求的话会造成挂载过程的阻塞，因为第一次<code>render</code>推迟执行，从而导致白屏卡顿，或者可能多次进行调用，发送多个请求。如果在 <code>componentDidMount</code> 中进行同步的请求的话，可以在第一次 <code>render</code> 中渲染一些 loading 画面等等。之后等数据返回之后再展现内容，可以提高用户体验。</p>
 
 
                 
